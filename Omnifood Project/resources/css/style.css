@@ -1,0 +1,553 @@
+/*--------------------------------------------*/
+/* Basic Setup */
+/*--------------------------------------------*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /*includes margina and padding in the box size*/
+}
+
+html
+{
+    background-color: #ffffff;
+    color: #555555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.row
+{
+    max-width: 1140px;
+    margin: 0 auto;    
+}
+
+.clearfix:after
+{
+    content: ".";
+    clear:both;
+    /*display: block;
+    height: 0;
+    visibility: hidden;*/
+}
+
+/*--------------------------------------------*/
+/* Header Setup */
+/*--------------------------------------------*/
+
+header
+{   /*linear gradient for transperancy*/ 
+    background-image:  linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/hero.jpg'); 
+    
+    background-size: cover; /*covers the image on the whole page*/
+    background-position: center; /*zooms out the image so we can see the whole thing*/
+    background-attachment: fixed;
+    height:100vh; /*image has the height of the viewport*/
+}
+
+.hero-text-box
+{
+    position: absolute;
+    width: 1140px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%); /*moves the image left and top 50% of the top and left value*/
+}
+
+h1, h2, h3
+{
+    margin-top:0; /*removes the margin on top caused my normalize*/
+    margin-bottom:20px;
+    
+    font-weight: 100;
+    font-size:240%;
+    word-spacing:4px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+
+}
+
+h1
+{
+    color:#fff;
+}
+
+h2
+{
+    text-align: center;
+    font-size: 180%;
+    word-spacing: 2px;
+}
+
+.btn
+{
+    display: inline;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-weight: 100;
+    border-radius: 200px;
+    transition: background-color 0.5s;
+
+}
+
+.btn:hover
+{
+    background-color: #723a09;
+}
+
+.btn-full
+{
+    background-color: #e67e22;
+    color:#fff;
+}
+
+.btn-ghost
+{
+    color: #e67e22;
+    border: 1px solid #e67e22;
+}
+
+/*--------------------------------------------*/
+/* Nav bar Setup */
+/*--------------------------------------------*/
+
+.logo
+{
+    height:100px;
+    width:auto;
+    float:left;
+    margin-top: 10px;
+}
+
+.main-nav
+{
+    float:right;
+    list-style: none;
+    margin-top: 40px;
+    
+}
+
+.main-nav li
+{
+    display: inline-block;
+    margin-left:40px;
+    
+}
+
+.main-nav li a
+{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-bottom: 8px;
+}
+
+.main-nav li a:hover
+{
+    border-bottom: 2px solid #e67e22;
+}
+
+/*--------------------------------------------*/
+/* Section Setup */
+/*--------------------------------------------*/
+
+.section-features
+{
+    margin-top: 80px;
+}
+
+h2:after
+{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: #e67e22;
+    margin:0 auto;
+    margin-top: 30px;
+    
+}
+
+.long-copy
+{
+    width:800px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 145%;
+    margin-bottom: 20px;
+}
+
+.icon-row
+{
+    margin-top: 50px;
+}
+
+.icon-big
+{
+    font-size: 350%;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+div h3
+{
+    font-size:90%;
+    
+}
+
+.box p
+{
+    font-size: 80%;
+    line-height: 145%;
+}
+
+/*--------------------------------------------*/
+/* Meals Showcase */
+/*--------------------------------------------*/
+
+.section-meals
+{
+    margin-top:150px;
+    
+}
+
+.meals-showcase
+{
+    width:100%;
+    list-style: none;
+}
+
+.meals-showcase li
+{
+    display:block;
+    width:25%;
+    float: left;
+}
+
+.meals-showcase li figure
+{
+    width: 100%;
+    margin: 0;
+}
+
+.meals-showcase li figure img
+{
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    transform: scale(1.1);
+    opacity: 0.7;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meals-showcase li figure img:hover
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+/*--------------------------------------------*/
+/* How it works */
+/*--------------------------------------------*/
+
+.section-steps
+{
+    background-color: #f4f4f4;
+}
+
+.section-steps div h2
+{
+    margin-top: 50px;
+}
+
+.app-screen
+{
+    width: 40%;
+}
+
+.steps-box
+{
+    margin-top: 30px;
+}
+
+.steps-box:first-child
+{
+    text-align: right;
+    padding-right: 6%;
+}
+
+.work-steps
+{
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.work-steps div
+{
+    width: 55px;
+    height: 55px;
+    border: 2px solid #e67e22;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 25px;
+    text-align: center;
+    font-size: 150%;
+    float: left;
+}
+
+.btn-app
+{
+    height: 50px;
+    width: auto;
+}
+
+
+/*--------------------------------------------*/
+/* Cities Showcase */
+/*--------------------------------------------*/
+
+.section-cities
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.box img
+{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.icon-small
+{
+    color: #e67e22;
+    margin-right: 15px;
+    
+}
+
+.city-feature
+{
+    line-height: 145%;
+}
+
+.city-feature a:link
+{
+    text-decoration: none;
+    color: #555555;
+}
+
+
+/*--------------------------------------------*/
+/* Testimonials Showcase */
+/*--------------------------------------------*/
+
+.section-testimonials
+{
+    background-image:  linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/back-customers.jpg'); 
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+
+}
+
+.section-testimonials div h2
+{
+    margin-top: 50px;
+}
+
+blockquote
+{
+    line-height: 145%;
+    font-weight: 100;
+    font-size: 90%;
+    font-style: italic;
+    padding: 2%;
+}
+
+blockquote::before
+{
+    content: "\201C";
+    font-size: 400%;
+}
+
+cite
+{
+    font-size: 90%;
+    display: block;
+    padding: 5px;
+    margin-top: 15px;
+    
+}
+
+cite img
+{
+    height: 45px;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding-right: 15px;
+}
+
+/*--------------------------------------------*/
+/* How it works */
+/*--------------------------------------------*/
+
+.section-plans
+{
+    background-color: #f4f4f4;
+   
+}
+
+.section-plans h2
+{
+    margin-top: 50px;
+}
+
+.plan-box
+{
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 28%;
+    margin-left: 5%;
+    padding:25px;
+    box-shadow: 2px 2px 10px #e67e22;
+}
+
+.plan-price
+{
+    color: #e67e22;
+    font-size: 200%;
+    font-weight: 100;
+    
+}
+
+.plan-price span
+{
+    font-size: 40%;
+}
+
+.plan-price-meal
+{
+    font-size: 60%;
+}
+
+.plan-box ul
+{
+    list-style: none;
+    margin-top: 30px;
+}
+
+.plan-box ul li
+{
+    padding: 5px;
+    font-size: 80%;
+}
+
+.plan-box ul li:nth-child(3)
+{
+    margin-bottom: 30px;
+}
+
+/*--------------------------------------------*/
+/* Sign Up Form */
+/*--------------------------------------------*/
+
+.section-form
+{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+input[type=text],
+input[type=email],
+textarea,
+select
+{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #555555;
+    padding: 7px;
+}
+
+textarea
+{
+    height: 100px;
+}
+
+input[type=submit]
+{
+
+    padding: 10px 30px;
+    font-weight: 100;
+    border-radius: 200px;
+    transition: background-color 0.5s;
+    background-color: #e67e22;
+    color:#fff;
+    border: 0;
+}
+
+input[type=checkbox]
+{
+    margin-right: 10px;
+}
+
+input[type=submit]:hover
+{
+    background-color: #723a09;
+}
+
+/*--------------------------------------------*/
+/* Footer */
+/*--------------------------------------------*/
+
+footer
+{
+    background-color: #333333;
+    margin-top: 50px;
+}
+
+.footer-nav
+{
+    list-style: none;
+    float: left;
+}
+
+.social-links
+{
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li
+{
+    display: inline-block;
+    margin-right: 20px;
+
+}
+
+.footer-nav li a,
+.social-links li a
+{
+    text-decoration: none;
+    color: #e67e22;
+    font-size: 80%;
+}
+
+.footer-nav li a:hover
+{
+    text-decoration: underline;
+    
+}
+
+footer p
+{
+    font-size: 60%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}

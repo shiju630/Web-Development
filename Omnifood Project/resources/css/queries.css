@@ -1,0 +1,67 @@
+
+
+@media only screen and (max-width: 600px) 
+{
+    html 
+    {
+      font-size: 80%;
+    }
+
+    /* header*/
+    .hero-text-box
+    {
+        width: 300px;
+    }
+
+    .logo
+    {
+        height: 70px;
+    }
+
+    .main-nav li
+    {
+        margin-left: 10px;
+        margin-right: 2px;
+    }
+
+    .main-nav li a
+    {
+        width: 10px;
+    }
+
+    /*section setup*/
+    .section-features
+    {
+        text-align: center;
+    }
+    .long-copy
+    {
+        width: 400px;
+    }
+
+    /* how it works*/
+    .steps-box:first-child
+    {
+        text-align: center;
+        
+    }
+
+    .work-steps div
+    {
+        margin-top: -20px;
+        padding: 10px;
+    }
+
+    /*cities showcase*/
+    .section-cities
+    {
+        text-align: center;
+    }
+    
+    .box img
+    {
+        width: 70%;
+        
+    }
+
+  }

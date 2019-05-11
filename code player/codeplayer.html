@@ -1,0 +1,153 @@
+<html>
+  
+  <head>
+    
+    <title>Code Player</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+      <style type="text/css">
+    
+        body
+        {
+          margin:0;
+          padding:0;
+          font-family:sans-serif;
+        }
+        
+        #head
+        {
+          width:100%;
+          height:30px;
+          padding:5px;
+          background-color:#EEEEEE;
+        }
+        
+        #logo
+        {
+          font-weight:bold;
+          font-size:120%;
+          float:left;
+          padding: 3px 5px;
+        }
+        
+        #headcontainer
+        {
+          width:260px;
+          margin:0 auto;
+        }
+        
+        .toggleButton
+        {
+          float:left;
+          border: 1px solid grey;
+          padding:6px;
+          border-right:none;
+        }
+        
+        .toggleButton:hover
+        {
+          background-color: grey;
+        }
+        
+        #html
+        {
+          border-top-left-radius:4px;
+          border-bottom-left-radius:4px;
+        }
+        
+        #output
+        {
+          border-top-right-radius:4px;
+          border-bottom-right-radius:4px;
+          border-right:1px solid grey;
+        }
+        
+        .btnclick
+        {
+          background-color:#c2d4dd;
+        }
+        
+        .panel
+        {
+          width:24%;
+          height:75%;
+          float:left;
+          resize:none;
+        }
+        
+        #outputPanel
+        {
+          border-top:none;
+          border-left:none;
+        }
+        
+        .hidden
+        {
+          display:none;
+        }
+    
+      </style>
+      
+  </head>
+  
+
+  
+  <body>
+    
+    <div id="head">
+      
+      <div id="logo">
+        
+        CodePlayer
+        
+      </div>
+      
+      <div id="headcontainer">
+        
+        <div class="toggleButton" id="html">HTML</div>
+        <div class="toggleButton" id="css">CSS</div>
+        <div class="toggleButton" id="javascript">JavaScript</div>
+        <div class="toggleButton" id="output">Output</div>
+        
+      </div>
+      
+    </div>
+    
+    
+        <div id="bodyContainer">
+        
+            <textarea id="htmlPanel" class="panel hidden"><p id="paragraph">Hello World!</p></textarea>
+            
+            <textarea id="cssPanel" class="panel hidden">p { color: green; }</textarea>
+            
+            <textarea id="javascriptPanel" class="panel hidden">document.getElementById("paragraph").innerHTML = "Hello Rob!";</textarea>
+            
+            <iframe id="outputPanel" class="panel hidden"></iframe>
+        
+        
+        </div>
+    
+    
+        <script>
+
+            $(".toggleButton").click(function(){
+              
+              $(this).toggleClass("btnclick");
+              
+              var pan = ($(this).attr("id") + 'Panel')
+              $("#" + pan).toggleClass("hidden")
+              
+            });
+            
+            $("textarea").on('change keyup paste', function()
+            {
+              $("iframe").contents().find("html").html($("#htmlPanel").val())
+            });
+
+        </script>
+    
+    
+  </body>
+  
+</html>
